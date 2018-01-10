@@ -35,3 +35,30 @@ $('#owl-depoimentos').owlCarousel({
     autoplayTimeout: 10000,
     autoplayHoverPause: true
 });
+
+$('#owl-equipe').owlCarousel({
+    loop: true,
+    margin: 15,
+    nav: false,
+    responsiveClass: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+        576: {
+            items: 1
+        },
+        768: {
+            items: 3
+        },
+        1300: {
+            items: 5
+        },
+        2000: {
+            items: 7
+        },
+        2500: {
+            items: 9
+        }
+    }
+});
