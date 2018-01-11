@@ -12,9 +12,9 @@
                     {% if not membro.dataFim %}
                         <article class="card">
                             {% if membro.possuiPhoto %}
-                                <img class="card-img-top" src="data:image/png;base64,{{ membro.photo64 }}"/>
+                                <img class="card-img-top rounded-circle" src="data:image/png;base64,{{ membro.photo64 }}"/>
                             {% else %}
-                                <img class="card-img-top" src="{% static "images/formiga.jpg" %}">
+                                <img class="card-img-top rounded-circle" src="{% static "images/formiga.jpg" %}">
                             {% endif %}
                             <div class="caption">
                                 <h5 class="card-title">{{ membro.nome }}</h5>
@@ -32,6 +32,7 @@
                                 {% endif %}
                             </div>
                         </article>
+
                     {% endif %}
                 {% endfor %}
             </div>
@@ -63,21 +64,32 @@
             <h4 class="caption text-center">QUEM JÁ PASSOU POR AQUI</h4>
             {% for membro in membros %}
                 {% if membro.dataFim %}
-                    <article class="card">
-                        <div class="row no-padding">
+                    <div class="people-past">
+                        <div class="person">
                             {% if membro.possuiPhoto %}
-                                <img class="card-img-top" src="data:image/png;base64,{{ membro.photo64 }}"/>
+                                <div class="text-center">
+                                    <img class="person-img rounded-circle" src="data:image/png;base64,{{ membro.photo64 }}"/>
+                                </div>
                             {% else %}
-                                <img class="card-img-top" src="{% static "images/formiga.jpg" %}">
+                                <div class="text-center">
+                                    <img class="person-img rounded-circle" src="{% static "images/formiga.jpg" %}">
+                                </div>
                             {% endif %}
-                            </a>
-                            <div class="caption text-center col-md-7 no-padding">
-                                <h5 class="card-title">{{ membro.nome }}</h5>
-                                <p class="flex-text text-muted card-text">{{ membro.atividade }}</p>
-                                <p class="flex-text text-muted card-text">De {{ membro.dataInicio }} até {{ membro.dataFim }}</p>
-                            </div>
+                            <div class="person-name">{{ membro.nome }}</div>
+                            <div class="person-country">{{ membro.pais }}</div>
+                            <div class="person-activity">{{ membro.atividade }}</div>
+                            <div class="person-period">de {{ membro.dataInicio }} a {{ membro.dataFim }}</div>
+                            {% if membro.email %}
+                                <a href="#"><i class="fa fa-envelope"></i></a>
+                            {% endif %}
+                            {% if membro.facebook %}
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                            {% endif %}
+                            {% if membro.telefone %}
+                                <a href="#"><i class="fa fa-phone"></i></a>
+                            {% endif %}
                         </div>
-                    </article>
+                    </div>
                 {% endif %}
             {% endfor %}
         </section>

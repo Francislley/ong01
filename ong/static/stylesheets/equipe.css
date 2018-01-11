@@ -2,3 +2,110 @@
     padding: 15px;
 }
 
+#p-equipe h4 {
+    padding-top: 15px;
+}
+
+#p-equipe .owl-carousel {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#p-equipe #depoimentos .card-img-top {
+    margin-bottom: 15px;
+}
+
+#p-equipe #depoimentos .card {
+    margin-bottom: 15px;
+}
+
+#p-equipe #depoimentos .card-text {
+    margin-bottom: 15px;
+}
+
+#p-equipe #ja-passou .card {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#p-equipe #depoimentos {
+    background-color: #d9ead3;
+}
+
+#p-equipe #ja-passou {
+    background-color: #e06666;
+}
+
+#p-equipe .row {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#p-equipe #ja-passou .card-img-top {
+    width: 7%;
+}
+
+#p-equipe #ja-passou .card-title {
+    padding: 5px;
+}
+
+#p-equipe .card-title {
+    color: #003366;
+    text-align: center;
+}
+
+#p-equipe .card-text {
+    text-align: center;
+    text-justify: inter-word;
+    hyphens: auto;
+    color: #000;
+}
+
+#p-equipe .member-social .fa{
+	color: #003366;
+	padding: 10px 5px;
+	font-size: 20px;
+}
+
+#p-equipe .people-past {
+  background-color: #e06666;
+  padding: 1em;
+}
+
+#p-equipe .person {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.3fr 1fr 1.5fr 0.7fr;
+  grid-template-rows: auto;
+  padding: 0.7em;
+}
+
+@media (max-width: 48em) {
+  #p-equipe .person {
+    grid-template-columns: 1fr;
+    grid-gap: 0.5em;
+    text-align: center;
+    border-bottom: 1px solid #722019;
+  }
+}
+
+#p-equipe .person-img {
+    align-self: center;
+    width: 60px;
+    height: 60px;
+}
+
+#p-equipe .person-name {
+    align-self: center;
+}
+
+#p-equipe .person-country {
+    align-self: center;
+}
+
+#p-equipe .person-activity {
+    align-self: center;
+}
+
+#p-equipe .person-period {
+    align-self: center;
+}
